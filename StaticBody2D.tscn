@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+
+polygon = PoolVector2Array( -60, -10, 50, -10, 50, 10, -60, 10 )
+
+[node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2( 520, 560 )
+rotation = -0.523599
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color( 0.188235, 0.188235, 0.188235, 1 )
+polygon = PoolVector2Array( -60, -10, 50, -10, 50, 10, -60, 10 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -60, -10, 50, -10, 50, 10, -60, 10 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 1 )
+
